@@ -22,6 +22,33 @@ def print_box(message, char="*"):
     print(f"{char[0]} {message} {char[0]}")
     print(border)
 
+def print_dog():
+    """
+    Prints a colored ASCII dog in the terminal.
+    """
+
+    BROWN = "\033[33m"
+    YELLOW = "\033[93m"
+    RESET = "\033[0m"
+
+    dog = [
+        r"      /^-----^\ ",
+        r"      V  o o  V",
+        r"       |  Y  |",
+        r"        \ Q /",
+        r"        / - \ ",
+        r"       |    \ ",
+        r"       |     \     )",
+        r"       || (___\===="
+    ]
+
+    for i, line in enumerate(dog):
+        if i <= 3:
+            color = BROWN   # head
+        else:
+            color = YELLOW  # body
+        print(color + line + RESET)
+
 
 
 
